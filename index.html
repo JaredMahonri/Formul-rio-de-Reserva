@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Formulário de Reserva de Viagem</title>
+</head>
+<body>
+<h1>Reserva de Viagem</h1>
+    <form>
+        <fieldset>
+            <legend>Dados Pessoais</legend>
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+        </fieldset>
+
+        <fieldset>
+            <legend>Serviços Desejados</legend>
+            <label><input type="checkbox" name="servicos[]" value="passagens"> Compra de Passagens</label><br>
+            <label><input type="checkbox" name="servicos[]" value="hospedagem"> Reserva de Hospedagem</label><br>
+            <label><input type="checkbox" name="servicos[]" value="veiculo"> Aluguel de Veículos</label>
+        </fieldset>
+
+        <fieldset>
+            <legend>Forma de Pagamento</legend>
+            <label><input type="radio" name="pagamento" value="cartao"> Cartão de Crédito</label><br>
+            <label><input type="radio" name="pagamento" value="boleto"> Boleto</label><br>
+            <label><input type="radio" name="pagamento" value="pix"> PIX</label>
+        </fieldset>
+
+        <fieldset>
+            <legend>Prazo de Pagamento</legend>
+            <select name="prazo">
+                <option value="avista">À Vista</option>
+                <option value="5x">5x sem juros</option>
+                <option value="10x">10x com juros</option>
+            </select>
+        </fieldset>
+
+        <button type="submit">Enviar</button>
+    </form>
+
+</body>
+</html>
